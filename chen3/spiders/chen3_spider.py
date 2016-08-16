@@ -16,8 +16,8 @@ class chen3Spider(Spider):
 	]
 def parse(self,response):
 	sel=Selector(response)
-	
-		sites=sel.xpath(xpaths)
+
+		sites=sel.xpath(//*[@id="ctl00_ContentPlaceHolder1_myGV_ctl02_HLinkGcmc"])
 		items=[]
 		for site in sites:
 			item=Chen3Item()
