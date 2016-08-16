@@ -16,9 +16,7 @@ class chen3Spider(Spider):
 	]
 def parse(self,response):
 	sel=Selector(response)
-	for i in range(2,101):
-		xpaths="/html/body/form/div[3]/span/table[2]/tbody/tr/td/table[3]/tbody/tr/td[2]/table/tbody/tr[2]/td/table/\
-		tbody/tr/td/div/table/tbody/tr("+"str(i)"+")/td[2]/a"
+	
 		sites=sel.xpath(xpaths)
 		items=[]
 		for site in sites:
